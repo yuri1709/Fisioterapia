@@ -41,7 +41,8 @@
     </div>
    
 
-                                                        <!--Modal-->
+                                                        <!--Modal--> <!--Login Fisioterapeuta-->
+  <form action="ValidarLogin.php" method="POST">
   <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -55,23 +56,24 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <i class="fas fa-envelope prefix grey-text"></i>
-          <input type="email" id="defaultForm-email" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+          <input type="text" name="login" id="login" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-email">Seu nome usuário</label>
         </div>
 
         <div class="md-form mb-4">
           <i class="fas fa-lock prefix grey-text"></i>
-          <input type="password" id="defaultForm-pass" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+          <input type="password" name="senha" id="senha" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-pass">Sua senha</label>
         </div>
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-default bg-primary">Entrar</button>
+        <button type="submit" class="btn btn-default bg-primary">Entrar</button>
       </div>
     </div>
   </div>
 </div>
- 
+</form>
+                                     <!--Modal--> <!--Login usuario-->
 </body>
 </html>
