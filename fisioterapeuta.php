@@ -1,4 +1,4 @@
-
+<?php include_once "restrito.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
