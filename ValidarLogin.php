@@ -33,7 +33,7 @@ if(mysqli_num_rows($res) == 1){
     header("location:direcionar.php");
     //header("location:fisioterapeutaGRUD.php"); //redireciona para outra pagina
 } else{
-    ?><script>  alert("Senha ou usúario inválido!")
+    ?><script>  alert("Senha ou usuário inválido!")
     window.location.href="login.php";</script>
     <?php
    
