@@ -30,10 +30,13 @@ if(mysqli_num_rows($res) == 1){
     $_SESSION["nome"] = $row["nome"];
     $_SESSION["perfil"] = $row["perfil"];
     $_SESSION["tempo"] = time(); // guarda o momento exato do login
-    header("location:fisioterapeutaGRUD.php"); //redireciona para outra pagina
+    header("location:direcionar.php");
+    //header("location:fisioterapeutaGRUD.php"); //redireciona para outra pagina
 } else{
-    header("location:index.php");
-    echo"deu ruim";
+    ?><script>  alert("Senha ou usúario inválido!")
+    window.location.href="login.php";</script>
+    <?php
+   
 }
 
 ?>

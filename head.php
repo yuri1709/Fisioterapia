@@ -15,6 +15,10 @@
   .navbar{
     background: #4682B4;
   }
+  .home{
+    margin-top:1px;
+    margin-left:-3px;
+  }
 </style>
 <div id="container">
     <nav class="navbar navbar-dark fixed-top container pb-2">
@@ -30,17 +34,17 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-  
         <div class="collapse navbar-collapse" id="navbarsExample01">
+          <hr>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link h5" href="index.php">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link h5 home" href="index.php"><img src="img/home/homeIcon.png" alt="" width="32px" height="32px"> Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link h5" href="#contato">Contato</a>
+             <a class="nav-link h5" href="login.php"><img src="img/home/loginIcon.png" alt="" width="28px" height="28px"> Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link h5" href="#tiposDeLong">Modalidades</a>
+              <a class="nav-link h5" href="#tiposDeLong"><img src="img/home/contatoIcon.png" alt="" width="28px" height="28px"> Contato</a>
             </li>
           </ul>
         </div>

@@ -1,4 +1,4 @@
-mysql -u root;
+mysql -u root
 
 create database FisioRio;
 
@@ -16,6 +16,5 @@ create table usuario(
 
 #inserir dado na tabela
 
-insert into usuario values(null,'yuri','conder','yuri7','123','yuri@hotmail.com','adm');
 
 select * from usuario;

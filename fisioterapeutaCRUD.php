@@ -31,7 +31,8 @@
   </div>
  <div class="container c2">
  <a href="cadastroPaciente.php">Cadastrar Paciente</a> </br>
- <a href="editarPaciente.php">Editar cadastro</a>
+ <a href="editarPaciente.php">Editar cadastro</a> </br>
+ <a href="sair.php">Sair</a>
  </div>
 </body>
 </html>
