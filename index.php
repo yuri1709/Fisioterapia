@@ -42,7 +42,7 @@
    
 
                                                         <!--Modal--> <!--Login Fisioterapeuta-->
-  <form action="ValidarLogin.php" method="POST">
+  <form action="validarFisioterapeuta.php" method="POST">
   <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">

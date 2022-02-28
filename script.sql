@@ -15,6 +15,10 @@ create table usuario(
 );
 
 #inserir dado na tabela
+insert into usuario values(null,'Administador','','admin','admin123','admin@hotmail.com','adm');
 
+insert into usuario values(null,'bruna','maher','paciente','bruna123','bruna@hotmail.com','paciente');
+
+UPDATE usuario SET login = "bruna" where login = "paciente";
 
 select * from usuario;
