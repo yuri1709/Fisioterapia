@@ -29,7 +29,7 @@
     <div class="container">
        <div class="paciente px-1 text-center">
             <h2 class="text-center bg-light">Paciente</h2>
-            <a href="paciente.php"><img src="img/home/paciente.png" alt="..." class="img-thumbnail"></a>
+            <a href="pacienteCRUD.php"><img src="img/home/paciente.png" alt="..." class="img-thumbnail"></a>
        </div> 
        <div class="medico text-center">
            <h2 class="text-center bg-light">Fisioterapeuta</h2>
