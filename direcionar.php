@@ -6,6 +6,8 @@
             break;
         case "medico":
             header("location:fisioterapeutaCRUD.php");
-            break;    
+            break;  
+        case "paciente":
+            header("location:pacienteCRUD.php");       
     } 
 ?>

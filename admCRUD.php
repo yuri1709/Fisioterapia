@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fisioterapeuta</title>
+    <style>
+    .c1{
+        padding-bottom:80px;
+    }
+    .paciente{
+        float:left;
+        width:40%;
+        background:white;
+    }
+    .medico{
+        float:right;
+        width:40%;
+        background:white;
+    }
+</style>
 </head>
 <body>
-    <h1>BEM VINDO ADMIN</h1>
+<?php
+    include_once "head.php";
+    session_start();
+?>
+  <div class="container c1">
+        <h2>Painel Admin</h2>
+  </div>
+ <div class="container c2">
+ <a href="cadastroPaciente.php">Cadastrar Paciente</a> </br>
+ <a href="editarPaciente.php">Editar cadastro</a> </br>
+ <a href="sair.php">Sair</a>
+ </div>
 </body>
 </html>
