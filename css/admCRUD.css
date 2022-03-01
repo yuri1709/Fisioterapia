@@ -1,0 +1,23 @@
+.painel{
+    float: left;
+    background-color:whitesmoke;
+    width: 800px;
+    height: 500px;
+}
+.search{
+    float: left;
+    width: 300px;  
+}
+.perfil{
+    float: right;
+}
+.resultado{
+    float:left;
+    width:500px;
+    height:300px;
+    background-color: white;
+}
+.mostrarTodos{
+    float:righ;
+    margin-top: 300px;
+}
