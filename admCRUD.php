@@ -25,7 +25,7 @@
     <div class="container painel my-4">
         <form class="form my-2" action="" method="POST">
             <div class="form-group search">
-                <input type="text" name="nome" id="nome" class="form-control" placeholder="nome"> 
+                <input type="text" name="nome" id="nome" class="form-control" placeholder="buscar o nome do usuário"> 
             </div>
             <button type="submit" class="btn btn-primary mx-2 px-2">Buscar</button>
             
