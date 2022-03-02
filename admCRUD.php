@@ -1,5 +1,6 @@
 <?php
     include_once "head.php";
+    include_once "conexao.php";
     session_start();
 ?>
 <!DOCTYPE html>
@@ -22,24 +23,40 @@
   <div class="container c1">
     <h2>Painel Admin</h2>
     <div class="container painel my-4">
-        <form class="form my-2">
+        <form class="form my-2" action="" method="POST">
             <div class="form-group search">
-                <input type="text" name="" id="" class="form-control" placeholder="nome"> 
+                <input type="text" name="nome" id="nome" class="form-control" placeholder="nome"> 
             </div>
             <button type="submit" class="btn btn-primary mx-2 px-2">Buscar</button>
             
             <div class="form-group perfil">
             <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-            <option value="1">Fisioterapeuta</option>
-            <option value="2">Paciente</option>
+            <option value="medico">Fisioterapeuta</option>
+            <option value="paciente">Paciente</option>
             </select>
             </div>
        
-        
         <!--Mostrar resultado da pesquisa-->
         <div class="container resultado">
-
+        <?php 
+                $nome = $_POST["nome"]?? "";  //esse ?? é um operador
+                $sql = "select * from usuario WHERE nome ='$nome'";
+                $result = mysqli_query($con,$sql);
+              
+                if(mysqli_num_rows($result)>0){
+                    while($linha = mysqli_fetch_array($result)){
+                        echo "<strong><br>Perfil:</strong> ".strtoupper($linha["perfil"]);
+                        echo "<br><strong>Nome:</strong> ".$linha["nome"];
+                        echo " ".$linha["sobrenome"];
+                        echo "<br><strong>Login:</strong> ".$linha["login"];
+                        echo "<br><strong>E-mail:</strong> ".$linha["email"];
+                    }
+                }else{
+                    echo"nada foi encontrado";
+                }
+            ?>
         </div>
+
 
         <div class="container mostrarTodos">
             <h6 class="text-center">mostrar todos os resultados</h6>
@@ -48,16 +65,15 @@
         <div class="container botoes py-4">
             <div class="row text-center">
                 <div class="col">
-                <button type="submit" class="btn btn-success mx-2 px-2">CRIAR</button>
+                    <button type="submit" class="btn btn-success mx-2 px-2">CRIAR</button>
                 </div>
                 <div class="col">
-                <button type="submit" class="btn btn-warning mx-2 px-2">EDITAR</button>
+                    <button type="submit" class="btn btn-warning mx-2 px-2">EDITAR</button>
                 </div>
                 <div class="col">
-                <button type="submit" class="btn btn-danger mx-2 px-2">EXLUIR</button>
+                    <button type="submit" class="btn btn-danger mx-2 px-2">EXLUIR</button>
                 </div>
             </div>
-    
         </div>
         </form>
     </div>
