@@ -1,8 +1,9 @@
 <?php
     session_start(); 
+    include_once "auth.php";
     include_once "head.php";
     include_once "conexao.php";
-    include_once "auth.php";
+    
     
 ?>
 <!DOCTYPE html>
