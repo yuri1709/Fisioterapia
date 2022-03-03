@@ -56,6 +56,11 @@
                         echo " ".$linha["sobrenome"];
                         echo "<br><strong>Login:</strong> ".$linha["login"];
                         echo "<br><strong>E-mail:</strong> ".$linha["email"];
+                        ?>
+                        <a href="editarUsuarioGeral.php?email=<?php echo base64_encode($linha["email"]); ?>">
+                        editar
+                        </a><?php
+                       $teste = $linha["email"];
                     }
                 }else{
                     echo"nada foi encontrado";
@@ -74,7 +79,10 @@
                     <button type="submit" class="btn btn-success mx-2 px-2">CRIAR</button>
                 </div>
                 <div class="col">
-                    <button type="submit" class="btn btn-warning mx-2 px-2">EDITAR</button>
+                <a href="editarUsuarioGeral.php?email=<?php echo base64_encode($teste); ?>">
+                    <button type="button"  class="btn btn-warning mx-2 px-2">EDITAR</button> 
+                </a>
+                
                 </div>
                 <div class="col">
                     <button type="submit" class="btn btn-danger mx-2 px-2">EXLUIR</button>

@@ -38,13 +38,13 @@
           <hr>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link h5 home" href="index.php"><img src="img/home/homeIcon.png" alt="" width="32px" height="32px"> Home<span class="sr-only">(current)</span></a>
+              <a class="nav-link h5 home" href="index.php"><img src="img/home/homeIcon.png" alt="" width="35px" height="35px"> Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
              <a class="nav-link h5" href="login.php"><img src="img/home/loginIcon.png" alt="" width="28px" height="28px"> Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link h5" href="#tiposDeLong"><img src="img/home/contatoIcon.png" alt="" width="28px" height="28px"> Contato</a>
+              <a class="nav-link h5" href="#contato"><img src="img/home/contatoIcon.png" alt="" width="28px" height="28px"> Contato</a>
             </li>
           </ul>
         </div>
