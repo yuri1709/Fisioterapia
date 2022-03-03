@@ -1,0 +1,17 @@
+<form action="atualizarUsuarioGeral.php">
+      <span>Login</span>
+      <input type="text" nome="login"><br>
+      <span>Nome</span>
+      <input type="text" nome="nome"><br>
+      <span>Sobrenome</span>
+      <input type="text" nome="sobrenome"><br>
+      
+      <span>Email</span>
+      <input type="text" nome="email"><br>
+      <span>Perfil</span>
+      <select name="perfil"> 
+        <option value="medico">Fisioterapeuta</option>
+        <option value="paciente">Paciente</option>
+      </select>
+    </form>
+  </div>

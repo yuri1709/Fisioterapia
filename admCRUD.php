@@ -16,7 +16,6 @@
     <style>
         .c1{
             padding-bottom:80px;
-           
         }
        .c2{
         padding-top:500px;
@@ -55,12 +54,8 @@
                         echo "<br><strong>Nome:</strong> ".$linha["nome"];
                         echo " ".$linha["sobrenome"];
                         echo "<br><strong>Login:</strong> ".$linha["login"];
-                        echo "<br><strong>E-mail:</strong> ".$linha["email"];
-                        ?>
-                        <a href="editarUsuarioGeral.php?email=<?php echo base64_encode($linha["email"]); ?>">
-                        editar
-                        </a><?php
-                       $teste = $linha["email"];
+                        echo "<br><strong>E-mail:</strong> ".$linha["email"];  
+                        $idUser = $linha["idUser"];                         
                     }
                 }else{
                     echo"nada foi encontrado";
@@ -79,7 +74,7 @@
                     <button type="submit" class="btn btn-success mx-2 px-2">CRIAR</button>
                 </div>
                 <div class="col">
-                <a href="editarUsuarioGeral.php?email=<?php echo base64_encode($teste); ?>">
+                <a href="editarUsuarioGeral.php?nome=<?php echo base64_encode($nome); ?>&idUser=<?php echo base64_encode($idUser); ?>">
                     <button type="button"  class="btn btn-warning mx-2 px-2">EDITAR</button> 
                 </a>
                 
