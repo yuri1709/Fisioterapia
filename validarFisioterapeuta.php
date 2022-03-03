@@ -29,6 +29,7 @@ if(mysqli_num_rows($res) == 1){
     $_SESSION["nome"] = $row["nome"];
     $_SESSION["perfil"] = $row["perfil"];
     $_SESSION["tempo"] = time(); // guarda o momento exato do login
+    $_SESSION['authenticated']=true; // autenticador recebe true 
     
     if($row["perfil"] == "medico"){
         header("location:direcionar.php");

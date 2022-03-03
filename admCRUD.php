@@ -1,7 +1,9 @@
 <?php
+    session_start(); 
     include_once "head.php";
     include_once "conexao.php";
-    session_start();
+    include_once "auth.php";
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,8 +15,11 @@
     <style>
         .c1{
             padding-bottom:80px;
+           
         }
-       
+       .c2{
+        padding-top:500px;
+       }
     </style>
     <link rel="stylesheet" href="css/admCRUD.css">
 </head>
@@ -23,7 +28,7 @@
   <div class="container c1">
     <h2>Painel Admin</h2>
     <div class="container painel my-4">
-        <form class="form my-2" action="" method="POST">
+        <form class="form my-2" action="" method="POST"  autocomplete="off">
             <div class="form-group search">
                 <input type="text" name="nome" id="nome" class="form-control" placeholder="buscar o nome do usuário"> 
             </div>
@@ -78,15 +83,13 @@
         </form>
     </div>
   </div>
-  </section> 
- 
+</section> 
+<section>
+    <div class="container c2">
+        <a href="sair.php">Sair</a>
+    </div> 
+</section>
 
-
-
- <!-- <div class="container c2">
- <a href="cadastroPaciente.php">Cadastrar Paciente</a> </br>
- <a href="editarPaciente.php">Editar cadastro</a> </br>
- <a href="sair.php">Sair</a>
- </div> -->
+  
 </body>
 </html>

@@ -1,4 +1,7 @@
-
+<?php 
+session_start();//at the very top of the page
+include_once "auth.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
