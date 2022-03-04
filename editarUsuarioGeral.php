@@ -35,37 +35,37 @@
   <div class="row mb-4">
     <div class="col">
       <div class="form-outline"> 
-        <input type ="checkbox" name="vetor[]" value="checkLogin">
+        
         <label class="form-label" for="form6Example1">Login</label>
-        <input type="text" name="login" class="form-control"  placeholder="editar login"/>
+        <input type="text" name="login" class="form-control"  value="<?php echo $reg["login"] ?>"/>
        
       </div>
     </div>
 
   <!-- Nome input -->
   <div class="form-outline mb-4">
-    <input type ="checkbox" name="vetor[]" value="checkNome">
+   
     <label class="form-label" for="form6Example4">Nome</label>
-    <input type="text" name="nome" class="form-control" placeholder="Editar nome" />
+    <input type="text" name="nome" class="form-control" value="<?php echo $reg["nome"] ?>"/>
   </div>
 
   <!--Sobrenome input -->
   <div class="form-outline mb-4">
-    <input type ="checkbox" name="vetor[]" value="checkSobrenome">
+  
     <label class="form-label" for="form6Example4">Sobrenome</label>
-    <input type="text" name="sobrenome" class="form-control" placeholder="Editar sobrenome" />
+    <input type="text" name="sobrenome" class="form-control" value="<?php echo $reg["sobrenome"] ?>" />
   </div>
 
   <!-- Email input -->
   <div class="form-outline mb-4">
-    <input type ="checkbox" name="vetor[]" value="checkEmail">
+ 
     <label class="form-label" for="form6Example5">Email</label>
-    <input type="email" name="email" class="form-control" placeholder="Editar Email"/>
+    <input type="email" name="email" class="form-control" value="<?php echo $reg["email"] ?>"/>
   </div>
 
   <!-- Perfil selection -->
   <div class="form-outline mb-4">
-    <input type ="checkbox" name="vetor[]" value="checkPerfil">
+    
     <label class="form-label" for="form6Example6">Mudar perfil para</label>
     <select name="perfil"> 
         <option value="medico">Fisioterapeuta</option>
