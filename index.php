@@ -65,11 +65,12 @@
           <input type="password" name="senha" id="senha" class="form-control validate">
           <label data-error="wrong" data-success="right" for="defaultForm-pass">Sua senha</label>
         </div>
-
       </div>
+         <?php if(isset($_GET["msg"])){echo $_GET["msg"];}?>
       <div class="modal-footer d-flex justify-content-center">
         <button type="submit" class="btn btn-default bg-primary">Entrar</button>
       </div>
+      
     </div>
   </div>
 </div>

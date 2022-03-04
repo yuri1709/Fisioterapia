@@ -18,7 +18,7 @@ if($nome != "" && $sobrenome != "" && $login != "" && $senha != "" && $email != 
     $result = mysqli_query($con,$sql);
     if($result){
         ?><script> alert("Cadastro realizado com sucesso!")
-            window.location.href="criarUsuarioGeral.php";</script>
+            window.location.href="admCRUD.php";</script>
     <?php
         mysqli_close($con);// fecha a conexão com o banco
     }else{

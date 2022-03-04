@@ -20,13 +20,14 @@ include_once 'conexao.php';
 
 //Montar a instrução para ir ao banco
     //vereficando se o login existe
-$sql = "select * from usuario where login = '".$login."' ";
+$sql = "select * from usuario where login = '".$login."' AND senha ='".$senha."'";
 $res = mysqli_query($con,$sql); // a var result ta retornando um vetor
 
 if(mysqli_num_rows($res) == 1){
     $row = mysqli_fetch_array($res);
     
     $_SESSION["nome"] = $row["nome"];
+    $_SESSION["senha"] = $row["senha"];
     $_SESSION["perfil"] = $row["perfil"];
     $_SESSION["tempo"] = time(); // guarda o momento exato do login
     $_SESSION['authenticated']=true; // autenticador recebe true 
@@ -47,9 +48,8 @@ if(mysqli_num_rows($res) == 1){
    
     //header("location:fisioterapeutaGRUD.php"); //redireciona para outra pagina
 } else{
-    ?><script>  alert("Senha ou usúario inválido!")
-    window.location.href="login.php";</script>
-    <?php
+    $msg = "Login/Senha Inválidos!";
+    header("location:index.php?msg=".$msg);
    
 }
 
