@@ -36,7 +36,7 @@
             <button type="submit" class="btn btn-primary mx-2 px-2">Buscar</button>
             
             <div class="form-group perfil">
-            <a href="showAllUsuarioGeral.php">show all</a>
+            <a href="showAllUsuarioGeral.php"><img src="img/admPainel/lupa.png" alt="" width="38px" height="38px"></a>
             <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
             <option value="medico">Fisioterapeuta</option>
             <option value="paciente">Paciente</option>
