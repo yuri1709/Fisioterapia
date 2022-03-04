@@ -1,7 +1,6 @@
 <?php
     session_start(); 
     include_once "auth.php";
-   
     include_once "conexao.php";
     
 
@@ -23,43 +22,52 @@
     
   <div class="container">
   <div class="container teste bg-light ">
-   <form class="form-group teste" action="atualizarUsuarioGeral.php" method="POST">
-  <!-- Login input -->
-  <div class="row mb-4">
-    <div class="col">
-      <div class="form-outline"> 
-        <input type ="checkbox" name="vetor[]" value="checkLogin">
-        <label class="form-label" for="form6Example1">Login</label>
-        <input type="text" name="login" class="form-control"  placeholder="editar login"/>
-       
-      </div>
-    </div>
+   <form class="form-group teste" action="cadastrarUsuarioGeral.php" method="POST">
+  
 
   <!-- Nome input -->
   <div class="form-outline mb-4">
-    <input type ="checkbox" name="vetor[]" value="checkNome">
+ 
     <label class="form-label" for="form6Example4">Nome</label>
-    <input type="text" name="nome" class="form-control" placeholder="Editar nome" />
+    <input type="text" name="nome" class="form-control" placeholder="nome" />
   </div>
 
   <!--Sobrenome input -->
   <div class="form-outline mb-4">
-    <input type ="checkbox" name="vetor[]" value="checkSobrenome">
+    
     <label class="form-label" for="form6Example4">Sobrenome</label>
-    <input type="text" name="sobrenome" class="form-control" placeholder="Editar sobrenome" />
+    <input type="text" name="sobrenome" class="form-control" placeholder="sobrenome" />
   </div>
 
+  <!-- Login input -->
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline"> 
+        <label class="form-label" for="form6Example1">Criar Login</label>
+        <input type="text" name="login" class="form-control"  placeholder="login"/>
+      </div>
+    </div>
+
+    <!-- Senha input -->
+  <div class="row mb-4 py-2">
+    <div class="col">
+      <div class="form-outline"> 
+        <label class="form-label" for="form6Example1">Criar senha</label>
+        <input type="password" name="senha" class="form-control"  placeholder="Criar senha"/>
+      </div>
+    </div>
+
   <!-- Email input -->
-  <div class="form-outline mb-4">
-    <input type ="checkbox" name="vetor[]" value="checkEmail">
-    <label class="form-label" for="form6Example5">Email</label>
-    <input type="email" name="email" class="form-control" placeholder="Editar Email"/>
+  <div class="form-outline mb-4 py-2">
+
+    <label class="form-label" for="form6Example5">Insira o email</label>
+    <input type="email" name="email" class="form-control" placeholder="Email"/>
   </div>
 
   <!-- Perfil selection -->
   <div class="form-outline mb-4">
-    <input type ="checkbox" name="vetor[]" value="checkPerfil">
-    <label class="form-label" for="form6Example6">Mudar perfil para</label>
+   
+    <label class="form-label" for="form6Example6">Tipo de cadastro:</label>
     <select name="perfil"> 
         <option value="medico">Fisioterapeuta</option>
         <option value="paciente">Paciente</option>
@@ -69,7 +77,7 @@
   <!-- Submit button -->
  <div class="py-4">
   <input type="reset" value="Limpar"/ class="btn btn-danger">
-  <input type="submit" value="Enviar"/ class="btn btn-primary">
+  <input type="submit" value="Cadastrar"/ class="btn btn-primary">
 </div> 
 <!--responsavel por enviar o idUser para a pagina atualizarUsuarioGeral-->
 </form>
