@@ -20,8 +20,9 @@
        .c2{
         padding-top:500px;
        }
+       
     </style>
-    <link rel="stylesheet" href="css/admCRUD.css">
+<link rel="stylesheet" href="css/admCRUD.css">
 </head>
 <body>
 <section>
@@ -35,10 +36,12 @@
             <button type="submit" class="btn btn-primary mx-2 px-2">Buscar</button>
             
             <div class="form-group perfil">
+            <a href="showAllUsuarioGeral.php">show all</a>
             <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
             <option value="medico">Fisioterapeuta</option>
             <option value="paciente">Paciente</option>
             </select>
+          
             </div>
        
         <!--Mostrar resultado da pesquisa-->
@@ -64,9 +67,7 @@
         </div>
 
 
-        <div class="container mostrarTodos">
-            <h6 class="text-center">mostrar todos os resultados</h6>
-        </div>
+       
         
         <div class="container botoes py-4">
             <div class="row text-center">
@@ -80,8 +81,11 @@
                 
                 </div>
                 <div class="col">
-                    <button type="submit" class="btn btn-danger mx-2 px-2">EXLUIR</button>
+                <a href="excluirUsuarioGeral.php?idUser=<?php echo base64_encode($idUser); ?>">
+                    <button type="button" class="btn btn-danger mx-2 px-2">EXLUIR</button>
+                </a>
                 </div>
+           
             </div>
         </div>
         </form>
@@ -90,7 +94,7 @@
 </section> 
 <section>
     <div class="container c2">
-        <a href="sair.php">Sair</a>
+       <h4> <a href="sair.php">Sair</a>
     </div> 
 </section>
 

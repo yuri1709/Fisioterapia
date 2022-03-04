@@ -26,7 +26,7 @@
 </head>
 <body>
   <div class="container c1">
-    <h2><?php echo "Editar usuário: ".$login; ?></h2>
+    <h2><?php echo "Editar usuário: ".$login; ?><a href="admCRUD.php"><button type="button" class="btn btn-success float-right">Sair</button></a></h2>
     
   <div class="container-flex">
   <div class="container bg-light">
@@ -89,6 +89,7 @@
   <input type="reset" value="Limpar"/ class="btn btn-danger">
   <input type="submit" value="Enviar"/ class="btn btn-primary">
 </div> 
+<!--responsavel por enviar o idUser para a pagina atualizarUsuarioGeral-->
 <input type="hidden" name="idUser" value="<?php echo $reg["idUser"];?>;"/> 
 </form>
 </div>

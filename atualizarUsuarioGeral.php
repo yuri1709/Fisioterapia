@@ -4,7 +4,7 @@ include 'auth.php';
 include_once "conexao.php";
 
 //pegando os dados
-$idUser = $_POST["idUser"]
+$idUser = $_POST["idUser"];
 $login = $_POST["login"];
 $nome = $_POST["nome"];
 $sobrenome = $_POST["sobrenome"];
