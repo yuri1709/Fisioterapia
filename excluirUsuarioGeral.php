@@ -21,7 +21,4 @@ mysqli_close($con);
 echo "<script>alert('".$msg."');
 location.href= 'admCRUD.php';
 </script>";
-
-
-
 ?>

@@ -3,6 +3,7 @@
     include_once "auth.php";
     include_once "head.php";
     include_once "conexao.php";
+  
     
     
 ?>
@@ -49,6 +50,7 @@
         <!--Mostrar resultado da pesquisa-->
         <div class="container resultado">
         <?php 
+        
                 $nome = $_POST["nome"]?? "";  //esse ?? é um operador
                 $sql = "select * from usuario WHERE nome ='$nome'";
                 $result = mysqli_query($con,$sql);
@@ -60,7 +62,7 @@
                         echo " ".$linha["sobrenome"];
                         echo "<br><strong>Login:</strong> ".$linha["login"];
                         echo "<br><strong>E-mail:</strong> ".$linha["email"];  
-                        $idUser = $linha["idUser"];                         
+                        $idUser = $linha["idUser"];                                             
                     }
                 }else{
                     echo"nada foi encontrado";
@@ -85,8 +87,8 @@
                 
                 </div>
                 <div class="col">
-                <a href="excluirUsuarioGeral.php?idUser=<?php echo base64_encode($idUser); ?>">
-                    <button type="button" class="btn btn-danger mx-2 px-2">EXLUIR</button>
+                <a href="excluirUsuarioGeral.php?idUser=<?php echo base64_encode($idUser);?>">
+                    <button type="button" onclick="return confirm('Tem certeza que deseja deletar este registro?')" class="btn btn-danger mx-2 px-2">EXLUIR</button>
                 </a>
                 </div>
            
