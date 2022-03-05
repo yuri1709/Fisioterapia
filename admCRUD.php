@@ -44,7 +44,7 @@
             <option value="medico">Fisioterapeuta</option>
             <option value="paciente">Paciente</option>
             </select>
-            <button type="submit" formaction="showAllUsuarioGeral.php"><img src="img/admPainel/lupa.png" alt="" width="38px" height="38px"></button>
+                <button class="btn btn-outline-info btn-sm" type="submit" formaction="showAllUsuarioGeral.php"><img src="img/admPainel/lupa.png" alt="" width="30px" height="30px"></button>
             </div>
           
         <!--Mostrar resultado da pesquisa-->

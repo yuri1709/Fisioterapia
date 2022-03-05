@@ -19,8 +19,9 @@
 <?php  include_once "head.php"; ?>
 <body>
   <div class="container c1">
-    
-  <div class="container">
+  <h2 class="text-center">Criar usuário<a href="admCRUD.php"><button type="button" class="btn btn-success float-right">Sair</button></a></h2>
+     
+  <div class="container my-2">
   <div class="container teste bg-light ">
    <form class="form-group teste" action="cadastrarUsuarioGeral.php" method="POST">
   
@@ -43,7 +44,7 @@
   <div class="row mb-4">
     <div class="col">
       <div class="form-outline"> 
-        <label class="form-label" for="form6Example1">Criar Login</label>
+        <label class="form-label" for="form6Example1">Login</label>
         <input type="text" name="login" class="form-control"  placeholder="login"/>
       </div>
     </div>
@@ -52,7 +53,7 @@
   <div class="row mb-4 py-2">
     <div class="col">
       <div class="form-outline"> 
-        <label class="form-label" for="form6Example1">Criar senha</label>
+        <label class="form-label" for="form6Example1">senha</label>
         <input type="password" name="senha" class="form-control"  placeholder="Criar senha"/>
       </div>
     </div>
@@ -60,7 +61,7 @@
   <!-- Email input -->
   <div class="form-outline mb-4 py-2">
 
-    <label class="form-label" for="form6Example5">Insira o email</label>
+    <label class="form-label" for="form6Example5">egmail</label>
     <input type="email" name="email" class="form-control" placeholder="Email"/>
   </div>
 
