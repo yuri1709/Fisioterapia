@@ -37,16 +37,16 @@
                 <input type="text" name="nome" id="nome" class="form-control" placeholder="buscar o nome do usuário"> 
             </div>
             <button type="submit" class="btn btn-primary mx-2 px-2">Buscar</button>
-            
+           
             <div class="form-group perfil">
-            <a href="showAllUsuarioGeral.php"><img src="img/admPainel/lupa.png" alt="" width="38px" height="38px"></a>
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <!-- <a href="showAllUsuarioGeral.php"><img src="img/admPainel/lupa.png" alt="" width="38px" height="38px"></a> -->
+            <select name="perfil" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
             <option value="medico">Fisioterapeuta</option>
             <option value="paciente">Paciente</option>
             </select>
-          
+            <button type="submit" formaction="showAllUsuarioGeral.php"><img src="img/admPainel/lupa.png" alt="" width="38px" height="38px"></button>
             </div>
-       
+          
         <!--Mostrar resultado da pesquisa-->
         <div class="container resultado">
         <?php 
