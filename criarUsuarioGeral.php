@@ -61,7 +61,7 @@
   <!-- Email input -->
   <div class="form-outline mb-4 py-2">
 
-    <label class="form-label" for="form6Example5">egmail</label>
+    <label class="form-label" for="form6Example5">email</label>
     <input type="email" name="email" class="form-control" placeholder="Email"/>
   </div>
 
