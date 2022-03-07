@@ -22,3 +22,14 @@ insert into usuario values(null,'bruna','maher','bruna','bruna123','bruna@hotmai
 /*UPDATE usuario SET login = "bruna" where login = "paciente";*/
 
 select * from usuario;
+
+create table pacientes(
+    idPaciente int primary key auto_increment,
+    cpf int (11),
+    IdUser int,
+    CONSTRAINT fk_usuarioPaciente FOREIGN KEY (IdUser) REFERENCES usuario (idUser)
+);
+
+#inserindo dados na tabela
+insert into pacientes values(null,17574229783,16);
+/*UUID_TO_BIN(UUID())*/
