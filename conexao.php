@@ -1,3 +1,6 @@
 <?php
-    $con = mysqli_connect("localhost","root","","FisioRio");
+    $con = mysqli_connect("localhost",
+    "root",
+    "",
+    "FisioRio");
 ?>
