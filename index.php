@@ -39,7 +39,7 @@
            <h2 class="text-center bg-light">Fisioterapeuta</h2>
            <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm"><img src="img/home/fisio.png" alt="Fisioterapeuta" class="img-fluid"></a>
            <div class="container criarConta">
-              <p class="text-center py-4">Ei! se você for fisioterapeuta e não possui cadastro <a href="criarContaFisio">crie a sua conta aqui</a></p>
+              <p class="text-center py-4">Ei! se você for fisioterapeuta e não possui cadastro <a href="criarContaFisio.php">crie a sua conta aqui</a></p>
           </div>
        </div>
     </div>
