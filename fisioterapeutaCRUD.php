@@ -1,6 +1,7 @@
 <?php 
 session_start();//at the very top of the page
 include_once "auth.php";
+if ($_SESSION['perfil']=='1'){}else{header('Location: http://localhost/Fisioterapia/login.php');exit;}//evita que outro usuario autenticado acesse a página
 ?>
 <!DOCTYPE html>
 <html lang="en">

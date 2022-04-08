@@ -3,9 +3,7 @@
     include_once "auth.php";
     include_once "head.php";
     include_once "conexao.php";
-  
-    
-    
+    if ($_SESSION['perfil']=='0'){}else{header('Location: http://localhost/Fisioterapia/login.php');exit;}
 ?>
 <!DOCTYPE html>
 <html lang="en">
