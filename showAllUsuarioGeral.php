@@ -23,7 +23,7 @@ $perfil = $_POST['perfil'];
         $totalRegistro = mysqli_num_rows($result);
 
         if($totalRegistro > 0){
-            echo "Foram encontrados: ".$totalRegistro." registros na base de dados !";
+            echo "Total: ".$totalRegistro." registros";
            ?>
            <table table class="table table-striped my-3">
                <tr>
