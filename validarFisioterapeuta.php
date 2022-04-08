@@ -32,15 +32,15 @@ if(mysqli_num_rows($res) == 1){
     $_SESSION["tempo"] = time(); // guarda o momento exato do login
     $_SESSION['authenticated']=true; // autenticador recebe true 
     
-    if($row["perfil"] == "medico"){
+    if($row["perfil"] == '1'){
         header("location:direcionar.php");
-    } else if($row["perfil"] == "adm"){
+    } else if($row["perfil"] == '0'){
         ?><script>  
             alert("Prezado administrador,esta área de login é destinado somente para fisioterapeutas.Você será direcionado para a página de login geral,clique no botão OK para prosseguir.")
             window.location.href="login.php";
           </script>
         <?php
-      } else if($row["perfil"] == "paciente"){
+      } else if($row["perfil"] == '2'){
         ?><script>  alert("Prezado paciente, esta área é restrita aos fisioterapeutas, para realizar consultas acesse a área do paciente na página principal.");
         window.location.href="index.php";</script>
         <?php   

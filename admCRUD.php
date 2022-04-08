@@ -41,8 +41,8 @@
             <div class="form-group perfil">
             <!-- <a href="showAllUsuarioGeral.php"><img src="img/admPainel/lupa.png" alt="" width="38px" height="38px"></a> -->
             <select name="perfil" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-            <option value="medico">Fisioterapeuta</option>
-            <option value="paciente">Paciente</option>
+            <option value="1">Fisioterapeuta</option>
+            <option value="2">Paciente</option>
             </select>
                 <button class="btn btn-outline-info btn-sm" type="submit" formaction="showAllUsuarioGeral.php"><img src="img/admPainel/lupa.png" alt="" width="30px" height="30px"></button>
             </div>
@@ -54,10 +54,11 @@
                 $nome = $_POST["nome"]?? "";  //esse ?? é um operador
                 $sql = "select * from usuario WHERE nome ='$nome'";
                 $result = mysqli_query($con,$sql);
-              
+               
                 if(mysqli_num_rows($result)>0){
                     while($linha = mysqli_fetch_array($result)){
-                        echo "<strong><br>Perfil:</strong> ".strtoupper($linha["perfil"]);
+                       switch($linha["perfil"]){case '0':$perfilNome = "Administrador";break;case '1':$perfilNome = "Fisioterapeuta";break;case '2':$perfilNome = "Paciente";break;}
+                        echo "<strong><br>Perfil:</strong> ".strtoupper($perfilNome);
                         echo "<br><strong>Nome:</strong> ".$linha["nome"];
                         echo " ".$linha["sobrenome"];
                         echo "<br><strong>Login:</strong> ".$linha["login"];

@@ -14,11 +14,11 @@ $perfil = $_POST['perfil'];
 </head>
 <body>
     <div class="container">
-        <h3 class="text-center bg primary">Lista de <?php echo $perfil;?> </h3><a class="text float-right" href="admCRUD.PHP">voltar</a>
+        <?php switch($perfil){case '1':$perfilNome = "Fisioterapeuta";break;case '2':$perfilNome = "Paciente";break;}?>
+        <h3 class="text-center bg primary">Lista de <?php echo $perfilNome;?> </h3><a class="text float-right" href="admCRUD.PHP">voltar</a>
 
         <?php
         $sql = "select * from usuario WHERE perfil= '$perfil'";
-
         $result = mysqli_query($con,$sql);
         $totalRegistro = mysqli_num_rows($result);
 
@@ -36,6 +36,9 @@ $perfil = $_POST['perfil'];
                </tr>
             <?php
             while($linha = mysqli_fetch_array($result)){
+                if($linha["perfil"] == '1'){
+                    $linha["perfil"]="Fisioterapeuta";
+                }
                 ?>
                 <tr>
                     <td><?php echo $linha["idUser"]?></td>
@@ -43,7 +46,7 @@ $perfil = $_POST['perfil'];
                     <td><?php echo $linha["sobrenome"]?></td>
                     <td><?php echo $linha["login"]?></td>
                     <td><?php echo $linha["email"]?></td>
-                    <td><?php echo $linha["perfil"]?></td>
+                    <td><?php echo $perfilNome?></td>
                 </tr>
           
            
