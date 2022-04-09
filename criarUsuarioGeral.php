@@ -99,8 +99,8 @@
     
       <label class="form-label" for="form6Example6">Tipo de cadastro:</label>
       <select name="perfil"> 
-          <option value="medico">Fisioterapeuta</option>
-          <option value="paciente">Paciente</option>
+          <option value='1'>Fisioterapeuta</option>
+          <option value='2'>Paciente</option>
         </select>
     </div>
 
