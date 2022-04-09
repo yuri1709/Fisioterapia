@@ -25,14 +25,14 @@
         <div class="form-row my-4 ">
             <div class="col-4">
                 <label for="" class="form-label float-left">CPF</label>
-                <input type="number" class="form-control">
+                <input type="number" name="cpf" class="form-control">
             </div>
             <div class="col-12">
-                <label for="" class="form-label">CPF</label>
-                <input type="number" class="form-control form-control-sm">
+                <label for="" class="form-label">CRM</label>
+                <input type="number" name="crm" class="form-control form-control-sm">
             </div>
         </div>
-   
+   <button type="submit">SUBMIT</button>
     </form>
   </div>
   </div>
