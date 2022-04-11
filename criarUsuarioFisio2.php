@@ -37,30 +37,30 @@ include_once "conexao.php";
         
     <!-- CPF E CREDITO -->
         <div class="form-row my-4 ">
-            <div class="col-4">
+            <div class="col-md-4">
                 <label for="" class="form-label float-left">CPF</label>
-                <input type="number" name="cpf" class="form-control ">
+                <input type="number" name="cpf" class="form-control" required>
             </div>
             <div class="col-md-6">
                 <label for="" class="form-label">CREFITO</label>
-                <input type="number" name="crm" class="form-control">
+                <input type="number" name="crefito" class="form-control" required>
             </div>
         </div>
         <!-- Data-de-Nascimento -->
         <div class="form-row my-4">
-            <div class="col-6">
+            <div class="col-md-2">
               <label class="form-label">Data de nascimento</label>
-              <input type="date" class="form-control"> <br>
+              <input type="date" name="dataNasci" class="form-control" required> <br>
             </div>
         
         <!-- sexo -->
         <div class="row mx-0"><label for="">Sexo:</label>          
-            <div class="col form-check mx-4">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <div class="col-md form-check mx-4">
+                <input class="form-check-input" type="radio" name="sexo" id="sexo" value="h" checked required>
                 <label class="form-check-label" for="exampleRadios1">Masculino</label>                               
             </div>  
-            <div class="col form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <div class="col-md form-check mx-4">
+                <input class="form-check-input" type="radio" name="sexo" id="sexo" value="f" checked required>
                 <label class="form-check-label" for="exampleRadios1">Feminino</label>                               
             </div>  
         </div>
