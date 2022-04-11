@@ -68,11 +68,11 @@
         function validatePassword(){
           if(password.value != confirm_password.value) {
             confirm_password.setCustomValidity("Senhas diferentes!");
-            document.getElementById("senha").style.borderColor="#FF0000";
+            document.getElementById("senha").style.borderColor="#FF0000";//vermelho
             document.getElementById("confirmarSenha").style.borderColor="#FF0000";
           } else {
             confirm_password.setCustomValidity('');
-            document.getElementById("senha").style.borderColor="#028200";
+            document.getElementById("senha").style.borderColor="#028200";//verde
             document.getElementById("confirmarSenha").style.borderColor="#028200";
           }
         }

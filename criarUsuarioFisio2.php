@@ -1,5 +1,12 @@
 <?php session_start();
-  $nome = $_SESSION["nome"];
+include_once "conexao.php";
+  $email = $_SESSION["email"];
+  $sql = "select * from usuario where idUser=".$email;
+  //excutar
+  $rs = mysqli_query($con,$sql);
+  if(mysqli_num_rows($rs) == 1){
+    $reg = mysqli_fetch_array($rs);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +23,7 @@
 <?php  include_once "head.php"; ?>
 <body>
 <div class="container c1">
-  <h2 class="text-center">Vamos lá <?php echo $nome;?> , estamos quase terminando<a href="index.php"><button type="button" class="btn btn-success float-right">Sair</button></a></h2>
+  <h2 class="text-center">Vamos lá <?php echo $reg['nome'];?> , estamos quase terminando<a href="index.php"><button type="button" class="btn btn-success float-right">Sair</button></a></h2>
      
   <div class="container c2">
   <div class="container teste bg-light my-4 ">
