@@ -18,7 +18,7 @@ $crm = $_POST['crm'];
 
     
 //validar dados fisio1
-if($nome != "" && $sobrenome != "" && $login != "" && $senha != "" && $email != "" && $perfil != "" ){  
+if($nome !== "" && $sobrenome !== "" && $login !== "" && $senha !== "" && $email !== "" && $perfil !== "" ){  
     $etapa = $etapa + 1;
     header("location: criarUsuarioFisio2.php");
 }else{
