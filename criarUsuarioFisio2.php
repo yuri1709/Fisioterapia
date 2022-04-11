@@ -1,7 +1,7 @@
 <?php session_start();
 include_once "conexao.php";
   $email = $_SESSION["email"];
-  $sql = "select * from usuario where idUser=".$email;
+  $sql = "select * from usuario where email='$email'";
   //excutar
   $rs = mysqli_query($con,$sql);
   if(mysqli_num_rows($rs) == 1){
@@ -28,7 +28,7 @@ include_once "conexao.php";
   <div class="container c2">
   <div class="container teste bg-light my-4 ">
    
-    <form class="form-group teste" action="cadastrarUsuarioFisio.php" method="POST">
+    <form class="form-group teste" action="cadastrarUsuarioFisio2.php" method="POST">
         <div class="form-row my-4 ">
             <div class="col-4">
                 <label for="" class="form-label float-left">CPF</label>
