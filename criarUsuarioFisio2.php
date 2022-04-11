@@ -18,30 +18,57 @@ include_once "conexao.php";
   <title>Criar Usuário</title>
 </head>
 <style>
-
+.c3{
+  padding-top:20px;
+}
 </style>    
 <?php  include_once "head.php"; ?>
 <body>
 <div class="container c1">
-  <h2 class="text-center">Vamos lá <?php echo $reg['nome'];?> , estamos quase terminando<a href="index.php"><button type="button" class="btn btn-success float-right">Sair</button></a></h2>
+  <h3 class="text-center">Vamos lá <?php echo $reg['nome'];?>, estamos quase terminando!<a href="index.php"><button type="button" class="btn btn-success float-right">Sair</button></a></h3>
      
   <div class="container c2">
+  <div class="container c3">
+    <h6 class="text-center">Preencha o formulário abaixo:</h6>
+  </div>  
   <div class="container teste bg-light my-4 ">
    
     <form class="form-group teste" action="cadastrarUsuarioFisio2.php" method="POST">
+        
+    <!-- CPF E CREDITO -->
         <div class="form-row my-4 ">
             <div class="col-4">
                 <label for="" class="form-label float-left">CPF</label>
-                <input type="number" name="cpf" class="form-control">
+                <input type="number" name="cpf" class="form-control ">
             </div>
-            <div class="col-12">
-                <label for="" class="form-label">CRM</label>
-                <input type="number" name="crm" class="form-control form-control-sm">
+            <div class="col-md-6">
+                <label for="" class="form-label">CREFITO</label>
+                <input type="number" name="crm" class="form-control">
             </div>
         </div>
-   <button type="submit">SUBMIT</button>
+        <!-- Data-de-Nascimento -->
+        <div class="form-row my-4">
+            <div class="col-6">
+              <label class="form-label">Data de nascimento</label>
+              <input type="date" class="form-control"> <br>
+            </div>
+        
+        <!-- sexo -->
+        <div class="row mx-0"><label for="">Sexo:</label>          
+            <div class="col form-check mx-4">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">Masculino</label>                               
+            </div>  
+            <div class="col form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">Feminino</label>                               
+            </div>  
+        </div>
+    </div> 
+    </div>
+      <div class="text-left mx-2"><button type="button" class="btn btn-primary ">Next</button></div>
     </form>
-  </div>
+  
   </div>
 </div>
 </body>
