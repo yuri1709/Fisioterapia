@@ -66,7 +66,7 @@ include_once "conexao.php";
         </div>
     </div> 
     </div>
-      <div class="text-left mx-2"><button type="button" class="btn btn-primary ">Next</button></div>
+      <div class="text-left mx-2"><button type="submit" class="btn btn-primary ">Next</button></div>
     </form>
   
   </div>

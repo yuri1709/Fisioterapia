@@ -19,7 +19,7 @@ if($result){
     mysqli_close($con);// fecha a conexão com o banco
 } else {
     ?><script>  alert("Favor preencher o formulário corretamente!")
-    window.location.href="criarUsuarioFisio.php"</script><?php
+    window.location.href="criarUsuarioFisio2.php"</script><?php
 }
 ?>
 
