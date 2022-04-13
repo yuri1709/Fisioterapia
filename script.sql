@@ -35,3 +35,36 @@ create table pacientes(
 /*#inserindo dados na tabela
 insert into pacientes values(null,17574229783,16);
 */
+#TENTATIVA1 DE FAZER O RELACIONAMENTO
+
+#adicionando chave estrageira na tabela usuario
+ALTER TABLE usuario ADD COLUMN codigo_fisio INT,
+ADD CONSTRAINT fk_codigo_fisio
+FOREIGN KEY (codigo_fisio) 
+REFERENCES fisioterapeuta (idFisio);
+
+#fazendo a ligação do codigo_fisio da tabela usuario com o 
+#codigo idFsio da tabela fisioterapeuta.
+UPDATE usuario SET codigo_fisio = 1 WHERE idUser = 48;
+
+#Agora para fazermos uma ligação bidirecional, teremos que adicionar uma chave
+estrangeira da tabela usuario na tabela fisioterapeuta.
+
+#adicionando chave estrageira na tabela fisioterapeuta
+ALTER TABLE fisioterapeuta ADD COLUMN codigo_user INT,
+ADD CONSTRAINT fk_codigo_user
+FOREIGN KEY (codigo_user)
+REFERENCES usuario (idUser);
+
+#fazendo a ligação do codigo_user da tabela fisioterapeuta com 
+#codigo idUser da tabela usuario.
+UPDATE fisioterapeuta SET codigo_user = 48 WHERE idFisio = 1;
+
+#
+ALTER TABLE fisioterapeuta DROP FOREIGN KEY fk_codigo_user; 
+#TENTATIVA2 DE FAZER O RELACIONAMENTO
+
+
+
+
+

@@ -7,13 +7,13 @@ $dataNasci = $_POST["dataNasci"];
 $sexo = $_POST["sexo"];
 
 //inserindo dados na tabela
-$sql = "insert into fisioterapeuta values('".$cpf."', '".$crefito."', '".$dataNasci."', '".$sexo."')";
+$sql = "insert into fisioterapeuta values(null,'".$cpf."', '".$crefito."', '".$dataNasci."', '".$sexo."')";
 $result = mysqli_query($con,$sql);
 if($result){
     ?>
     <script>
         alert("Cadastro fisioterapeuta realizado com sucesso!");
-        window.location.href="index.php";//temporario, mudar depois!
+        window.location.href="criarUsuarioEndereco.php";//temporario, mudar depois!
     </script>
     <?php
      mysqli_close($con);
