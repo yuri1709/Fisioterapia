@@ -33,7 +33,7 @@
     <div class="container">
        <div class="paciente px-1 my-4 text-center col-md-6"> <!--colunas são importantes para responsividade-->
             <h2 class="text-center bg-light">Paciente</h2>
-            <a href="pacienteCRUD.php"><img src="img/home/paciente.png" alt="Paciente" class="img-fluid"></a>
+            <a href="manutencao.php"><img src="img/home/paciente.png" alt="Paciente" class="img-fluid"></a>
        </div> 
        <div class="medico my-4 text-center col-md-6"> <!--colunas são importantes para responsividade-->
            <h2 class="text-center bg-light">Fisioterapeuta</h2>
