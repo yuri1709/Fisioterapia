@@ -9,9 +9,6 @@ include_once "conexao.php";
 $idUser = base64_decode($_GET["idUser"]);
 
 $sql = "delete from usuario where idUser =".$idUser;
-
-include_once 'conexao.php';
-
 if(mysqli_query($con,$sql)){
     $msg = "Cadastro excluído com Sucesso!";
 }else{

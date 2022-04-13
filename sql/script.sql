@@ -10,7 +10,7 @@ create table usuario(
     sobrenome varchar(50) not null,
     login varchar(50) unique,
     senha varchar(50) not null,
-    email varchar(40) not null,
+    email varchar(40) unique not null,
     perfil enum('0','1','2')
 );
 
@@ -60,11 +60,18 @@ REFERENCES usuario (idUser);
 #codigo idUser da tabela usuario.
 UPDATE fisioterapeuta SET codigo_user = 48 WHERE idFisio = 1;
 
-#
+#APAGANDO CHAVE ESTRANGEIRA
 ALTER TABLE fisioterapeuta DROP FOREIGN KEY fk_codigo_user; 
 #TENTATIVA2 DE FAZER O RELACIONAMENTO
 
 
+#teste de inserir o email do usuario na tabela fisioterapeuta
+ALTER TABLE fisioterapeuta ADD COLUMN email_user VARCHAR(40),
+ADD CONSTRAINT fk_email_user
+FOREIGN KEY (email_user)
+REFERENCES usuario (email);
 
+#jogando um email na tabela fisioterapeuta.
+UPDATE fisioterapeuta SET email_user ="pink@hotmail.com" WHERE idFisio = 1;
 
 

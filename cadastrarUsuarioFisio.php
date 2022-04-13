@@ -14,6 +14,7 @@ $sql = "insert into usuario values(null, '".$nome."', '".$sobrenome."', '".$logi
 $result = mysqli_query($con,$sql);
 if($result){
     $_SESSION["email"] = $email;
+    $_SESSION['authenticated'] = true;
     ?><script> alert("Cadastro realizado com sucesso!")
     window.location.href="criarUsuarioFisio2.php";</script><?php
     mysqli_close($con);// fecha a conexão com o banco

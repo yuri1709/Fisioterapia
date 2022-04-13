@@ -1,5 +1,6 @@
 <?php
 include_once "conexao.php";
+include_once "auth.php";
 
 $cpf = $_POST["cpf"];
 $crefito = $_POST["crefito"];

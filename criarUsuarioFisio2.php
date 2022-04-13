@@ -1,5 +1,7 @@
 <?php session_start();
 include_once "conexao.php";
+include_once "auth.php";
+
   $email = $_SESSION["email"];
   $sql = "select * from usuario where email='$email'";
   //excutar
