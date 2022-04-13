@@ -104,7 +104,7 @@
     </script>
   
     <div class="container formulario bg-light">
-    <div class="L1"><P></P></div>
+  
         <form class="form-group" action="cadastrarUsuarioEndereco.php" method="post">   
             <div class="form-row my-2" >
                 <div class="form-inline">
@@ -113,28 +113,28 @@
                 onblur="pesquisacep(this.value);" />  
                 </div>        
             </div>
-            <div class="L1"><P></P></div>
+      
             <div class="form-row my-3">
                 <div class="form-inline">
                     <label class="form-label">Rua: </label> <br />
                     <input class="form-control mx-2"  type="text" id="rua" name="rua" size="60"/>  
                 </div>        
             </div>
-            <div class="L1"><P></P></div>
+          
             <div class="form-row my-3">
                 <div class="form-inline">
                     <label class="form-label">Bairro: </label> <br />
                     <input class="form-control mx-2" name="bairro" type="text" id="bairro" size="40" />  
                 </div>        
             </div>
-            <div class="L1"><P></P></div>
+          
             <div class="form-row  my-3">
                 <div class="form-inline">
                     <label class="form-label">Cidade: </label> <br />
                     <input class="form-control mx-2" name="cidade" type="text" id="cidade" size="40" />  
                 </div>        
             </div>
-            <div class="L1"><P></P></div>
+           
             <div class="form-row my-3">
                 <div class="form-inline">
                     <label class="form-label">Estado: </label> <br />
