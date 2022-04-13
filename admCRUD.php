@@ -67,7 +67,8 @@
                         echo "<strong><br>Perfil:</strong> ".strtoupper($perfilNome);                       
                         echo "<br><strong>Login:</strong> ".$linha["login"];
                         echo "<br><strong>E-mail:</strong> ".$linha["email"];  
-                        $idUser = $linha["idUser"];                                             
+                        $idUser = $linha["idUser"];
+                        $email = $linha["email"];                                            
                     }
                 }else{
                     echo"nada foi encontrado";
@@ -85,13 +86,13 @@
                 </a>
                 </div>
                 <div class="col">
-                <a href="editarUsuarioGeral.php?nome=<?php echo base64_encode($nome); ?>&idUser=<?php echo base64_encode($idUser); ?>"style="text-decoration:none">
+                <a href="editarUsuarioGeral.php?nome=<?php echo base64_encode($nome);?>&idUser=<?php echo base64_encode($idUser); ?>"style="text-decoration:none">
                     <button type="button"  class="btn-block btn-warning btn-sm">EDITAR</button> 
                 </a>
                 
                 </div>
                 <div class="col">
-                <a href="excluirUsuarioGeral.php?idUser=<?php echo base64_encode($idUser);?>" style="text-decoration:none">
+                <a href="excluirUsuarioGeral.php?idUser=<?php echo base64_encode($idUser);?>&email=<?php echo base64_encode($email);?>" style="text-decoration:none">
                     <button type="button" onclick="return confirm('Tem certeza que deseja deletar este registro?')" class="btn-block btn-danger btn-sm">EXLUIR</button>
                 </a>
                 </div>

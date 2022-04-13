@@ -7,16 +7,27 @@ include_once "conexao.php";
 // retirar a decodificação
 // base64_decode
 $idUser = base64_decode($_GET["idUser"]);
+$email = base64_decode($_GET["email"]);
+echo"EMAIL".$email;
 
-$sql = "delete from usuario where idUser =".$idUser;
+$sql2 = "DELETE FROM fisioterapeuta WHERE email_user ='$email' ";
+if(mysqli_query($con,$sql2)){
+    $msg = "Cadastro2 excluído com Sucesso!";
+}else{
+    $msg = "Erro ao Excluir";
+}
+
+$sql = "DELETE FROM usuario WHERE idUser = $idUser";
 if(mysqli_query($con,$sql)){
     $msg = "Cadastro excluído com Sucesso!";
 }else{
     $msg = "Erro ao Excluir";
 }
-mysqli_close($con);
-echo "<script>alert('".$msg."');
+
+echo $msg;
+
+/*echo "<script>alert('".$msg."');
 location.href= 'admCRUD.php';
-</script>";
+</script>";*/
+mysqli_close($con);
 ?>
-delete * from fisioterapeuta where = .$email
