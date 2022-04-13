@@ -1,10 +1,10 @@
 <?php
     session_start(); 
     include_once "auth.php";
-    include_once "head.php";
     include_once "conexao.php";
     if ($_SESSION['perfil']=='0'){}else{header('Location: http://localhost/Fisioterapia/login.php');exit;}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,26 +23,28 @@
           float:right;
        }
     </style>
+
 <link rel="stylesheet" href="css/admCRUD.css">
+<?php include_once "head.php";?>
 </head>
 <body>
-<section>   
-  <div class="container c1">
+<section>  
+  <div class="container c1 ">
    <div class="container header"><h2>Painel Admin <a href="sair.php" class="logout"><img src="img/admPainel/logout.png" alt="" width="36px" height="36px"></a> </h2></div> 
     <div class="container painel my-2">
         <form class="form my-2" action="" method="POST"  autocomplete="off">
-            <div class="form-group search">
+            <div class="form-group col-md-4 search">
                 <input type="text" name="nome" id="nome" class="form-control" placeholder="buscar o nome do usuário"> 
             </div>
-            <button type="submit" class="btn btn-primary mx-2 px-2">Buscar</button>
+            <button type="submit" class="btn btn-primary col-md-1 mx-2 px-2">Buscar</button>
            
-            <div class="form-group perfil">
+            <div class="form-group perfil float-right">
             <!-- <a href="showAllUsuarioGeral.php"><img src="img/admPainel/lupa.png" alt="" width="38px" height="38px"></a> -->
-            <select name="perfil" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <select name="perfil" class="form-select form-select-lg mb-3 col-md float-right" aria-label=".form-select-lg example">
             <option value="1">Fisioterapeuta</option>
             <option value="2">Paciente</option>
             </select>
-                <button class="btn btn-outline-info btn-sm" type="submit" formaction="showAllUsuarioGeral.php"><img src="img/admPainel/lupa.png" alt="" width="30px" height="30px"></button>
+                <button class="btn btn-outline-info btn-sm col-md-4 float-right" type="submit" formaction="showAllUsuarioGeral.php"><img src="img/admPainel/lupa.png" alt="" width="30px" height="30px"></button>
             </div>
           
         <!--Mostrar resultado da pesquisa-->
