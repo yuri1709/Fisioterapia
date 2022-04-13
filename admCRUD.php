@@ -62,9 +62,9 @@
                 if(mysqli_num_rows($result)>0){
                     while($linha = mysqli_fetch_array($result)){
                        switch($linha["perfil"]){case '0':$perfilNome = "Administrador";break;case '1':$perfilNome = "Fisioterapeuta";break;case '2':$perfilNome = "Paciente";break;}
-                        echo "<strong><br>Perfil:</strong> ".strtoupper($perfilNome);
-                        echo "<br><strong>Nome:</strong> ".$linha["nome"];
+                        echo "<br><strong>Nome completo:</strong> ".$linha["nome"];
                         echo " ".$linha["sobrenome"];
+                        echo "<strong><br>Perfil:</strong> ".strtoupper($perfilNome);                       
                         echo "<br><strong>Login:</strong> ".$linha["login"];
                         echo "<br><strong>E-mail:</strong> ".$linha["email"];  
                         $idUser = $linha["idUser"];                                             
@@ -80,32 +80,24 @@
          <div class="container botoes py-4">
             <div class="row text-center">
                 <div class="col">
-                <a href="criarUsuarioGeral.php">  
-                    <button type="button" class="btn btn-success mx-2 px-2">CRIAR</button>
+                <a href="criarUsuarioGeral.php"style="text-decoration:none">  
+                    <button type="button" class="btn-block btn-success btn-sm">CRIAR</button>
                 </a>
                 </div>
                 <div class="col">
-                <a href="editarUsuarioGeral.php?nome=<?php echo base64_encode($nome); ?>&idUser=<?php echo base64_encode($idUser); ?>">
-                    <button type="button"  class="btn btn-warning mx-2 px-2">EDITAR</button> 
+                <a href="editarUsuarioGeral.php?nome=<?php echo base64_encode($nome); ?>&idUser=<?php echo base64_encode($idUser); ?>"style="text-decoration:none">
+                    <button type="button"  class="btn-block btn-warning btn-sm">EDITAR</button> 
                 </a>
                 
                 </div>
                 <div class="col">
-                <a href="excluirUsuarioGeral.php?idUser=<?php echo base64_encode($idUser);?>">
-                    <button type="button" onclick="return confirm('Tem certeza que deseja deletar este registro?')" class="btn btn-danger mx-2 px-2">EXLUIR</button>
+                <a href="excluirUsuarioGeral.php?idUser=<?php echo base64_encode($idUser);?>" style="text-decoration:none">
+                    <button type="button" onclick="return confirm('Tem certeza que deseja deletar este registro?')" class="btn-block btn-danger btn-sm">EXLUIR</button>
                 </a>
                 </div>
             </div>
          </div>
         </form> 
 </section> 
-
-
-
-<section>
-   
-</section>
-
-  
 </body>
 </html>
