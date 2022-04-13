@@ -25,9 +25,9 @@ if(mysqli_query($con,$sql)){
 }
 
 echo $msg;
-
-/*echo "<script>alert('".$msg."');
-location.href= 'admCRUD.php';
-</script>";*/
+header('Location: http://localhost/Fisioterapia/admCRUD.php');
+// echo "<script>alert('".$msg."');
+// location.href= 'admCRUD.php';
+// </script>"
 mysqli_close($con);
 ?>
