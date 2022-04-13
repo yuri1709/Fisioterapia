@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once "conexao.php";
 include_once "auth.php";
 
@@ -7,8 +8,9 @@ $crefito = $_POST["crefito"];
 $dataNasci = $_POST["dataNasci"];
 $sexo = $_POST["sexo"];
 
+$email = $_SESSION["email"]; //pegando o email para inserir na tabela fisioterapeuta
 //inserindo dados na tabela
-$sql = "insert into fisioterapeuta values(null,'".$cpf."', '".$crefito."', '".$dataNasci."', '".$sexo."')";
+$sql = "insert into fisioterapeuta values(null,'".$cpf."', '".$crefito."', '".$dataNasci."', '".$sexo."', '".$email."')";
 $result = mysqli_query($con,$sql);
 if($result){
     ?>

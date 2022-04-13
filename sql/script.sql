@@ -75,3 +75,6 @@ REFERENCES usuario (email);
 UPDATE fisioterapeuta SET email_user ="pink@hotmail.com" WHERE idFisio = 1;
 
 
+#adicionando chave estrageira na tabela endereco
+
+

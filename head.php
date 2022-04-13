@@ -49,7 +49,7 @@
              <a class="nav-link h5" href="login.php"><img src="img/home/loginIcon.png" alt="" width="28px" height="28px"> Login</a>
             </li>
             <li class="nav-item common_class">
-              <a class="nav-link h5" href="#contato"><img src="img/home/contatoIcon.png" alt="" width="28px" height="28px"> Contato</a>
+              <a class="nav-link h5" href="manutencao.php"><img src="img/home/contatoIcon.png" alt="" width="28px" height="28px"> Contato</a>
             </li>
           </ul>
         </div>

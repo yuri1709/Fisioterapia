@@ -3,6 +3,11 @@ include_once "conexao.php";
 include_once "auth.php";
 
   $email = $_SESSION["email"];
+  if(!isset($email)){
+    header('Location: http://localhost/Fisioterapia/criarUsuarioFisio.php');
+  }else {
+   
+  }
   $sql = "select * from usuario where email='$email'";
   //excutar
   $rs = mysqli_query($con,$sql);

@@ -19,3 +19,4 @@ echo "<script>alert('".$msg."');
 location.href= 'admCRUD.php';
 </script>";
 ?>
+delete * from fisioterapeuta where = .$email
