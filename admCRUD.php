@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admCRUD.css">
     <title>Fisioterapeuta</title>
     <style>
         .c1{
@@ -24,14 +25,17 @@
        }
     </style>
 
-<link rel="stylesheet" href="css/admCRUD.css">
+
 <?php include_once "head.php";?>
 </head>
 <body>
 <section>  
   <div class="container c1 ">
-   <div class="container header"><h2>Painel Admin <a href="sair.php" class="logout"><img src="img/admPainel/logout.png" alt="" width="36px" height="36px"></a> </h2></div> 
+   
+  <div class="container header"><h2>Painel Admin <a href="sair.php" class="logout"><img src="img/admPainel/logout.png" alt="" width="36px" height="36px"></a> </h2>
+  </div>   
     <div class="container painel my-2">
+        
         <form class="form my-2" action="" method="POST"  autocomplete="off">
             <div class="form-group col-md-4 search">
                 <input type="text" name="nome" id="nome" class="form-control" placeholder="buscar o nome do usuário"> 
@@ -39,11 +43,11 @@
             <button type="submit" class="btn btn-primary col-md-1 mx-2 px-2">Buscar</button>
            
             <div class="form-group perfil float-right">
-            <!-- <a href="showAllUsuarioGeral.php"><img src="img/admPainel/lupa.png" alt="" width="38px" height="38px"></a> -->
-            <select name="perfil" class="form-select form-select-lg mb-3 col-md float-right" aria-label=".form-select-lg example">
-            <option value="1">Fisioterapeuta</option>
-            <option value="2">Paciente</option>
-            </select>
+                <!-- <a href="showAllUsuarioGeral.php"><img src="img/admPainel/lupa.png" alt="" width="38px" height="38px"></a> -->
+                <select name="perfil" class="form-select form-select-lg mb-3 col-md float-right" aria-label=".form-select-lg example">
+                <option value="1">Fisioterapeuta</option>
+                <option value="2">Paciente</option>
+                </select>
                 <button class="btn btn-outline-info btn-sm col-md-4 float-right" type="submit" formaction="showAllUsuarioGeral.php"><img src="img/admPainel/lupa.png" alt="" width="30px" height="30px"></button>
             </div>
           
@@ -70,11 +74,10 @@
                 }
             ?>
         </div>
-
-
-       
-        
-        <div class="container botoes py-4">
+   
+    </div>   <!--Div do container painel-->
+   </div> <!--div do container c1-->
+         <div class="container botoes py-4">
             <div class="row text-center">
                 <div class="col">
                 <a href="criarUsuarioGeral.php">  
@@ -92,13 +95,13 @@
                     <button type="button" onclick="return confirm('Tem certeza que deseja deletar este registro?')" class="btn btn-danger mx-2 px-2">EXLUIR</button>
                 </a>
                 </div>
-           
             </div>
-        </div>
-        </form>
-    </div>
-  </div>
+         </div>
+        </form> 
 </section> 
+
+
+
 <section>
    
 </section>
