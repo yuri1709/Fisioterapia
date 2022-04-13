@@ -1,3 +1,7 @@
+<?php
+    include_once "head.php";
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,39 +10,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FisioRio-Home</title>
     <style>
-    .paciente{
-        float:left;
-        width:48%;
-        background:white;
+      .paciente{
+    float:left;
+    width:auto;
+    background:white;
     }
     .medico{
         float:right;
-        width:48%;
+        width:auto;
         background:white;
+
     }
     .criarConta{
-        margin-top:440px;
+        margin-top:1px;
     }
 </style>
-<link rel="stylesheet" href="css/responsive.css">
+<!-- <link rel="stylesheet" href="css/responsive.css"> -->
+
 </head>
 <body>
-    <?php
-    include_once "head.php";
-    ?>
+   
     <div class="container">
-       <div class="paciente px-1 text-center">
+       <div class="paciente px-1 my-4 text-center col-md-6"> <!--colunas são importantes para responsividade-->
             <h2 class="text-center bg-light">Paciente</h2>
-            <a href="pacienteCRUD.php"><img src="img/home/paciente.png" alt="..." class="img-thumbnail"></a>
+            <a href="manutencao.php"><img src="img/home/paciente.png" alt="Paciente" class="img-fluid"></a>
        </div> 
-       <div class="medico text-center">
+       <div class="medico my-4 text-center col-md-6"> <!--colunas são importantes para responsividade-->
            <h2 class="text-center bg-light">Fisioterapeuta</h2>
-           <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm"><img src="img/home/fisio.png" alt="..." class="img-thumbnail"></a>
+           <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm"><img src="img/home/fisio.png" alt="Fisioterapeuta" class="img-fluid"></a>
+           <div class="container criarConta">
+              <p class="text-center py-4">Ei! se você for fisioterapeuta e não possui cadastro <a href="criarUsuarioFisio.php">crie a sua conta aqui</a></p>
+          </div>
        </div>
     </div>
-    <div class="container criarConta">
-            <p class="text-center py-4">Ei! se você for fisioterapeuta e não possui cadastro <a href="criarContaFisio">crie a sua conta aqui</a></p>
-    </div>
+    
    
 
                                                         <!--Modal--> <!--Login Fisioterapeuta-->

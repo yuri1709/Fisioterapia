@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Topo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="js/jQuery.js"></script>
 </head>
 <body>
 <style>
@@ -19,14 +20,18 @@
     margin-top:1px;
     margin-left:-3px;
   }
+  /* .cristo-logo{
+    box-shadow: 10px 10px 5px 12px lightblue;
+  } */
 </style>
+
 <div id="container">
     <nav class="navbar navbar-dark fixed-top container pb-2">
         <a href="index.php">
         <img 
-            src="img/logo/logoCristo.jpg" 
-            class="d-inline-block align-top" 
-            alt="" 
+            src="img/logo/logoCristo.png" 
+            class="d-inline-block align-top img-fluid cristo-logo" 
+            alt="logo-CristoRedentor" 
             width="100" 
             height="100"/>
          </a>
@@ -37,14 +42,14 @@
         <div class="collapse navbar-collapse" id="navbarsExample01">
           <hr>
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item active common_class">
               <a class="nav-link h5 home" href="index.php"><img src="img/home/homeIcon.png" alt="" width="35px" height="35px"> Home<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item common_class">
              <a class="nav-link h5" href="login.php"><img src="img/home/loginIcon.png" alt="" width="28px" height="28px"> Login</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link h5" href="#contato"><img src="img/home/contatoIcon.png" alt="" width="28px" height="28px"> Contato</a>
+            <li class="nav-item common_class">
+              <a class="nav-link h5" href="manutencao.php"><img src="img/home/contatoIcon.png" alt="" width="28px" height="28px"> Contato</a>
             </li>
           </ul>
         </div>

@@ -1,13 +1,13 @@
 <?php
     session_start(); 
     switch ($_SESSION["perfil"]){
-        case "adm":
+        case "0":
             header("location:admCRUD.php");
             break;
-        case "medico":
+        case "1":
             header("location:fisioterapeutaCRUD.php");
             break;  
-        case "paciente":
+        case "2":
             header("location:pacienteCRUD.php");       
     } 
 ?>

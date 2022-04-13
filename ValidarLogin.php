@@ -27,7 +27,7 @@ if(mysqli_num_rows($res) == 1){
     $row = mysqli_fetch_array($res);
     
     $_SESSION["nome"] = $row["nome"];
-     $_SESSION["senha"] = $row["senha"];
+    $_SESSION["senha"] = $row["senha"];
     $_SESSION["perfil"] = $row["perfil"];
     $_SESSION["tempo"] = time(); // guarda o momento exato do login
     $_SESSION['authenticated']=true; //isso aqui é importante para a autenticação
@@ -36,10 +36,8 @@ if(mysqli_num_rows($res) == 1){
     
 } else{
     $msg = "Login/Senha Inválidos!";
-        header("location:login.php?msg=".$msg);
-   
+        header("location:login.php?msg=".$msg); 
 }
-
 ?>
 </body>
 </html>
